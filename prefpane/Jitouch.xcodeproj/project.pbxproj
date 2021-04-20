@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B92A25910D70265005901E6 /* ApplicationButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B92A25710D70265005901E6 /* ApplicationButton.h */; };
+		1B92A25A10D70265005901E6 /* ApplicationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B92A25810D70265005901E6 /* ApplicationButton.m */; };
+		1BC3361710BFA540000DB964 /* Settings.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC3361510BFA540000DB964 /* Settings.h */; };
+		1BC3361810BFA540000DB964 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3361610BFA540000DB964 /* Settings.m */; };
+		1BC3361B10BFA549000DB964 /* TrackpadTab.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC3361910BFA549000DB964 /* TrackpadTab.h */; };
+		1BC3361C10BFA549000DB964 /* TrackpadTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3361A10BFA549000DB964 /* TrackpadTab.m */; };
+		1BC3361F10BFA551000DB964 /* MagicMouseTab.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC3361D10BFA551000DB964 /* MagicMouseTab.h */; };
+		1BC3362010BFA551000DB964 /* MagicMouseTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3361E10BFA551000DB964 /* MagicMouseTab.m */; };
+		1BC3362310BFA55B000DB964 /* GestureTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC3362110BFA55B000DB964 /* GestureTableView.h */; };
+		1BC3362410BFA55B000DB964 /* GestureTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3362210BFA55B000DB964 /* GestureTableView.m */; };
+		1BC3362710BFA566000DB964 /* GesturePreviewView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC3362510BFA566000DB964 /* GesturePreviewView.h */; };
+		1BC3362810BFA566000DB964 /* GesturePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3362610BFA566000DB964 /* GesturePreviewView.m */; };
+		1BC3362B10BFA571000DB964 /* KeyTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC3362910BFA571000DB964 /* KeyTextField.h */; };
+		1BC3362C10BFA571000DB964 /* KeyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3362A10BFA571000DB964 /* KeyTextField.m */; };
+		1BC3362F10BFA579000DB964 /* KeyTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC3362D10BFA579000DB964 /* KeyTextView.h */; };
+		1BC3363010BFA579000DB964 /* KeyTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3362E10BFA579000DB964 /* KeyTextView.m */; };
+		1BC3363310BFA584000DB964 /* ImageAndTextCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC3363110BFA584000DB964 /* ImageAndTextCell.h */; };
+		1BC3363410BFA584000DB964 /* ImageAndTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3363210BFA584000DB964 /* ImageAndTextCell.m */; };
+		1BC3363710BFA595000DB964 /* MAAttachedWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC3363510BFA595000DB964 /* MAAttachedWindow.h */; };
+		1BC3363810BFA595000DB964 /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3363610BFA595000DB964 /* MAAttachedWindow.m */; };
+		1BC3364110BFA5A7000DB964 /* CommandTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC3363F10BFA5A7000DB964 /* CommandTableView.h */; };
+		1BC3364210BFA5A7000DB964 /* CommandTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3364010BFA5A7000DB964 /* CommandTableView.m */; };
+		1BC3364510BFA5B0000DB964 /* LinkTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC3364310BFA5B0000DB964 /* LinkTextField.h */; };
+		1BC3364610BFA5B0000DB964 /* LinkTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC3364410BFA5B0000DB964 /* LinkTextField.m */; };
+		1BF4317D10F460F5005DC569 /* Jitouch.app in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4317C10F460F5005DC569 /* Jitouch.app */; };
+		1BF4319610F462A8005DC569 /* jitouchicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4319510F462A8005DC569 /* jitouchicon.icns */; };
+		7B10BDD615F947D90062660F /* JitouchPref.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B10BDD415F947D90062660F /* JitouchPref.png */; };
+		7B10BDD715F947D90062660F /* JitouchPref@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B10BDD515F947D90062660F /* JitouchPref@2x.png */; };
+		7B703DA9262EBC90002157DD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B703DA8262EBC90002157DD /* IOKit.framework */; };
+		7B703DAB262EBC94002157DD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B703DAA262EBC94002157DD /* Cocoa.framework */; };
+		7B703DAD262EBC98002157DD /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B703DAC262EBC98002157DD /* Carbon.framework */; };
+		7B703DAF262EBC9D002157DD /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B703DAE262EBC9D002157DD /* PreferencePanes.framework */; };
+		7B703DB4262EBE26002157DD /* MultitouchSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B703DB3262EBE26002157DD /* MultitouchSupport.framework */; };
+		8D202CEB0486D31800D8A456 /* JitouchPref.h in Headers */ = {isa = PBXBuildFile; fileRef = F506C03C013D9D7901CA16C8 /* JitouchPref.h */; };
+		8D202CEF0486D31800D8A456 /* JitouchPref.xib in Resources */ = {isa = PBXBuildFile; fileRef = F506C042013D9D8C01CA16C8 /* JitouchPref.xib */; };
+		8D202CF10486D31800D8A456 /* JitouchPref.m in Sources */ = {isa = PBXBuildFile; fileRef = F506C03D013D9D7901CA16C8 /* JitouchPref.m */; };
+		A8B03D6D10F8DAEA00A9397E /* RecognitionTab.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B03D6B10F8DAEA00A9397E /* RecognitionTab.m */; };
+		A8B03D6E10F8DAEA00A9397E /* RecognitionTab.h in Headers */ = {isa = PBXBuildFile; fileRef = A8B03D6C10F8DAEA00A9397E /* RecognitionTab.h */; };
+		A8B4F4711100DEC300290CC4 /* AutoSetDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A8B4F46F1100DEC300290CC4 /* AutoSetDelegate.h */; };
+		A8B4F4721100DEC300290CC4 /* AutoSetDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B4F4701100DEC300290CC4 /* AutoSetDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B92A25710D70265005901E6 /* ApplicationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationButton.h; sourceTree = "<group>"; };
+		1B92A25810D70265005901E6 /* ApplicationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationButton.m; sourceTree = "<group>"; };
+		1BC3361510BFA540000DB964 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		1BC3361610BFA540000DB964 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		1BC3361910BFA549000DB964 /* TrackpadTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackpadTab.h; sourceTree = "<group>"; };
+		1BC3361A10BFA549000DB964 /* TrackpadTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackpadTab.m; sourceTree = "<group>"; };
+		1BC3361D10BFA551000DB964 /* MagicMouseTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicMouseTab.h; sourceTree = "<group>"; };
+		1BC3361E10BFA551000DB964 /* MagicMouseTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicMouseTab.m; sourceTree = "<group>"; };
+		1BC3362110BFA55B000DB964 /* GestureTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureTableView.h; sourceTree = "<group>"; };
+		1BC3362210BFA55B000DB964 /* GestureTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureTableView.m; sourceTree = "<group>"; };
+		1BC3362510BFA566000DB964 /* GesturePreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GesturePreviewView.h; sourceTree = "<group>"; };
+		1BC3362610BFA566000DB964 /* GesturePreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GesturePreviewView.m; sourceTree = "<group>"; };
+		1BC3362910BFA571000DB964 /* KeyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyTextField.h; sourceTree = "<group>"; };
+		1BC3362A10BFA571000DB964 /* KeyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyTextField.m; sourceTree = "<group>"; };
+		1BC3362D10BFA579000DB964 /* KeyTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyTextView.h; sourceTree = "<group>"; };
+		1BC3362E10BFA579000DB964 /* KeyTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyTextView.m; sourceTree = "<group>"; };
+		1BC3363110BFA584000DB964 /* ImageAndTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAndTextCell.h; sourceTree = "<group>"; };
+		1BC3363210BFA584000DB964 /* ImageAndTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAndTextCell.m; sourceTree = "<group>"; };
+		1BC3363510BFA595000DB964 /* MAAttachedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAttachedWindow.h; sourceTree = "<group>"; };
+		1BC3363610BFA595000DB964 /* MAAttachedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAttachedWindow.m; sourceTree = "<group>"; };
+		1BC3363F10BFA5A7000DB964 /* CommandTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandTableView.h; sourceTree = "<group>"; };
+		1BC3364010BFA5A7000DB964 /* CommandTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandTableView.m; sourceTree = "<group>"; };
+		1BC3364310BFA5B0000DB964 /* LinkTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkTextField.h; sourceTree = "<group>"; };
+		1BC3364410BFA5B0000DB964 /* LinkTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkTextField.m; sourceTree = "<group>"; };
+		1BF4317C10F460F5005DC569 /* Jitouch.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = Jitouch.app; sourceTree = "<group>"; };
+		1BF4319510F462A8005DC569 /* jitouchicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = jitouchicon.icns; sourceTree = "<group>"; };
+		7B10BDD415F947D90062660F /* JitouchPref.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JitouchPref.png; sourceTree = "<group>"; };
+		7B10BDD515F947D90062660F /* JitouchPref@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JitouchPref@2x.png"; sourceTree = "<group>"; };
+		7B703D8D262E9F7F002157DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/JitouchPref.xib; sourceTree = "<group>"; };
+		7B703DA8262EBC90002157DD /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		7B703DAA262EBC94002157DD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7B703DAC262EBC98002157DD /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		7B703DAE262EBC9D002157DD /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
+		7B703DB3262EBE26002157DD /* MultitouchSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultitouchSupport.framework; path = System/Library/PrivateFrameworks/MultitouchSupport.framework; sourceTree = SDKROOT; };
+		8D202CF70486D31800D8A456 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D202CF80486D31800D8A456 /* Jitouch.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jitouch.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8B03D6B10F8DAEA00A9397E /* RecognitionTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecognitionTab.m; sourceTree = "<group>"; };
+		A8B03D6C10F8DAEA00A9397E /* RecognitionTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecognitionTab.h; sourceTree = "<group>"; };
+		A8B4F46F1100DEC300290CC4 /* AutoSetDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoSetDelegate.h; sourceTree = "<group>"; };
+		A8B4F4701100DEC300290CC4 /* AutoSetDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoSetDelegate.m; sourceTree = "<group>"; };
+		F506C03C013D9D7901CA16C8 /* JitouchPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JitouchPref.h; sourceTree = "<group>"; };
+		F506C03D013D9D7901CA16C8 /* JitouchPref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JitouchPref.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D202CF20486D31800D8A456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B703DAD262EBC98002157DD /* Carbon.framework in Frameworks */,
+				7B703DAB262EBC94002157DD /* Cocoa.framework in Frameworks */,
+				7B703DA9262EBC90002157DD /* IOKit.framework in Frameworks */,
+				7B703DAF262EBC9D002157DD /* PreferencePanes.framework in Frameworks */,
+				7B703DB4262EBE26002157DD /* MultitouchSupport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* Jitouch */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				7B703DA7262EBC90002157DD /* Frameworks */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = Jitouch;
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7B10BDD415F947D90062660F /* JitouchPref.png */,
+				7B10BDD515F947D90062660F /* JitouchPref@2x.png */,
+				1BF4319510F462A8005DC569 /* jitouchicon.icns */,
+				1BF4317C10F460F5005DC569 /* Jitouch.app */,
+				8D202CF70486D31800D8A456 /* Info.plist */,
+				F506C042013D9D8C01CA16C8 /* JitouchPref.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1BC3361510BFA540000DB964 /* Settings.h */,
+				1BC3361610BFA540000DB964 /* Settings.m */,
+				F506C03C013D9D7901CA16C8 /* JitouchPref.h */,
+				F506C03D013D9D7901CA16C8 /* JitouchPref.m */,
+				1BC3361910BFA549000DB964 /* TrackpadTab.h */,
+				1BC3361A10BFA549000DB964 /* TrackpadTab.m */,
+				1BC3361D10BFA551000DB964 /* MagicMouseTab.h */,
+				1BC3361E10BFA551000DB964 /* MagicMouseTab.m */,
+				A8B03D6C10F8DAEA00A9397E /* RecognitionTab.h */,
+				A8B03D6B10F8DAEA00A9397E /* RecognitionTab.m */,
+				1BC3362110BFA55B000DB964 /* GestureTableView.h */,
+				1BC3362210BFA55B000DB964 /* GestureTableView.m */,
+				1BC3362510BFA566000DB964 /* GesturePreviewView.h */,
+				1BC3362610BFA566000DB964 /* GesturePreviewView.m */,
+				1BC3362910BFA571000DB964 /* KeyTextField.h */,
+				1BC3362A10BFA571000DB964 /* KeyTextField.m */,
+				1BC3362D10BFA579000DB964 /* KeyTextView.h */,
+				1BC3362E10BFA579000DB964 /* KeyTextView.m */,
+				1BC3363110BFA584000DB964 /* ImageAndTextCell.h */,
+				1BC3363210BFA584000DB964 /* ImageAndTextCell.m */,
+				1BC3363510BFA595000DB964 /* MAAttachedWindow.h */,
+				1BC3363610BFA595000DB964 /* MAAttachedWindow.m */,
+				1BC3363F10BFA5A7000DB964 /* CommandTableView.h */,
+				1BC3364010BFA5A7000DB964 /* CommandTableView.m */,
+				1BC3364310BFA5B0000DB964 /* LinkTextField.h */,
+				1BC3364410BFA5B0000DB964 /* LinkTextField.m */,
+				1B92A25710D70265005901E6 /* ApplicationButton.h */,
+				1B92A25810D70265005901E6 /* ApplicationButton.m */,
+				A8B4F46F1100DEC300290CC4 /* AutoSetDelegate.h */,
+				A8B4F4701100DEC300290CC4 /* AutoSetDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D202CF80486D31800D8A456 /* Jitouch.prefPane */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B703DA7262EBC90002157DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B703DAC262EBC98002157DD /* Carbon.framework */,
+				7B703DAA262EBC94002157DD /* Cocoa.framework */,
+				7B703DA8262EBC90002157DD /* IOKit.framework */,
+				7B703DAE262EBC9D002157DD /* PreferencePanes.framework */,
+				7B703DB3262EBE26002157DD /* MultitouchSupport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D202CE90486D31800D8A456 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D202CEB0486D31800D8A456 /* JitouchPref.h in Headers */,
+				1BC3361710BFA540000DB964 /* Settings.h in Headers */,
+				1BC3361B10BFA549000DB964 /* TrackpadTab.h in Headers */,
+				1BC3361F10BFA551000DB964 /* MagicMouseTab.h in Headers */,
+				1BC3362310BFA55B000DB964 /* GestureTableView.h in Headers */,
+				1BC3362710BFA566000DB964 /* GesturePreviewView.h in Headers */,
+				1BC3362B10BFA571000DB964 /* KeyTextField.h in Headers */,
+				1BC3362F10BFA579000DB964 /* KeyTextView.h in Headers */,
+				1BC3363310BFA584000DB964 /* ImageAndTextCell.h in Headers */,
+				1BC3363710BFA595000DB964 /* MAAttachedWindow.h in Headers */,
+				1BC3364110BFA5A7000DB964 /* CommandTableView.h in Headers */,
+				1BC3364510BFA5B0000DB964 /* LinkTextField.h in Headers */,
+				1B92A25910D70265005901E6 /* ApplicationButton.h in Headers */,
+				A8B03D6E10F8DAEA00A9397E /* RecognitionTab.h in Headers */,
+				A8B4F4711100DEC300290CC4 /* AutoSetDelegate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D202CE80486D31800D8A456 /* Jitouch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DBD214808BA80EA00186707 /* Build configuration list for PBXNativeTarget "Jitouch" */;
+			buildPhases = (
+				8D202CE90486D31800D8A456 /* Headers */,
+				8D202CEC0486D31800D8A456 /* Resources */,
+				8D202CF00486D31800D8A456 /* Sources */,
+				8D202CF20486D31800D8A456 /* Frameworks */,
+				8D202CF50486D31800D8A456 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jitouch;
+			productInstallPath = "$(HOME)/Library/PreferencePanes";
+			productName = Jitouch;
+			productReference = 8D202CF80486D31800D8A456 /* Jitouch.prefPane */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "Jitouch" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* Jitouch */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D202CE80486D31800D8A456 /* Jitouch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D202CEC0486D31800D8A456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D202CEF0486D31800D8A456 /* JitouchPref.xib in Resources */,
+				1BF4317D10F460F5005DC569 /* Jitouch.app in Resources */,
+				1BF4319610F462A8005DC569 /* jitouchicon.icns in Resources */,
+				7B10BDD615F947D90062660F /* JitouchPref.png in Resources */,
+				7B10BDD715F947D90062660F /* JitouchPref@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		8D202CF50486D31800D8A456 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D202CF00486D31800D8A456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D202CF10486D31800D8A456 /* JitouchPref.m in Sources */,
+				1BC3361810BFA540000DB964 /* Settings.m in Sources */,
+				1BC3361C10BFA549000DB964 /* TrackpadTab.m in Sources */,
+				1BC3362010BFA551000DB964 /* MagicMouseTab.m in Sources */,
+				1BC3362410BFA55B000DB964 /* GestureTableView.m in Sources */,
+				1BC3362810BFA566000DB964 /* GesturePreviewView.m in Sources */,
+				1BC3362C10BFA571000DB964 /* KeyTextField.m in Sources */,
+				1BC3363010BFA579000DB964 /* KeyTextView.m in Sources */,
+				1BC3363410BFA584000DB964 /* ImageAndTextCell.m in Sources */,
+				1BC3363810BFA595000DB964 /* MAAttachedWindow.m in Sources */,
+				1BC3364210BFA5A7000DB964 /* CommandTableView.m in Sources */,
+				1BC3364610BFA5B0000DB964 /* LinkTextField.m in Sources */,
+				1B92A25A10D70265005901E6 /* ApplicationButton.m in Sources */,
+				A8B03D6D10F8DAEA00A9397E /* RecognitionTab.m in Sources */,
+				A8B4F4721100DEC300290CC4 /* AutoSetDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F506C042013D9D8C01CA16C8 /* JitouchPref.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B703D8D262E9F7F002157DD /* Base */,
+			);
+			name = JitouchPref.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DBD214908BA80EA00186707 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2.75;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/MultitouchSupport.framework\"",
+					"$(PROJECT_DIR)",
+				);
+				MARKETING_VERSION = 2.75;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jitouch.${PRODUCT_NAME:identifier}";
+				PRODUCT_NAME = Jitouch;
+				STRIP_INSTALLED_PRODUCT = YES;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Debug;
+		};
+		1DBD214A08BA80EA00186707 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2.75;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/MultitouchSupport.framework\"",
+					"$(PROJECT_DIR)",
+				);
+				MARKETING_VERSION = 2.75;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jitouch.${PRODUCT_NAME:identifier}";
+				PRODUCT_NAME = Jitouch;
+				STRIP_INSTALLED_PRODUCT = YES;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Release;
+		};
+		1DBD214D08BA80EA00186707 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1DBD214E08BA80EA00186707 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DBD214808BA80EA00186707 /* Build configuration list for PBXNativeTarget "Jitouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DBD214908BA80EA00186707 /* Debug */,
+				1DBD214A08BA80EA00186707 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "Jitouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DBD214D08BA80EA00186707 /* Debug */,
+				1DBD214E08BA80EA00186707 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
