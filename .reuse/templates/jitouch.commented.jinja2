@@ -1,10 +1,16 @@
 /*
  * This file is part of Jitouch.
  *
- * Copyright 2021 Sukolsak Sakshuwong
- * Copyright 2021 Supasorn Suwajanakorn
+{% for copyright_line in copyright_lines %}
+ * {{ copyright_line }}
+{% endfor %}
+{% if copyright_lines and spdx_expressions %}
  *
- * SPDX-License-Identifier: GPL-3.0-or-later
+{% endif %}
+{% for expression in spdx_expressions %}
+ * SPDX-License-Identifier: {{ expression }}
+{% endfor %}
+{% if "GPL-3.0-or-later" in spdx_expressions %}
  *
  * Jitouch is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -17,22 +23,5 @@
  *
  * You should have received a copy of the GNU General Public License along with
  * Jitouch. If not, see <https://www.gnu.org/licenses/>.
+{% endif %}
  */
-
-#import <Cocoa/Cocoa.h>
-
-@class GestureView;
-
-@interface GestureWindow : NSWindow {
-    GestureView *gestureView;
-    NSTextField *tf;
-}
-- (void)setHintText:(const char*)str;
-- (void)addPointX:(float)x Y:(float)y;
-- (void)addRelativePointX:(float)x Y:(float)y;
-- (void)clear;
-- (void)refresh;
-- (void)setPossibleAlphabet:(NSString*)a;
-- (void)setUpWindowForTrackpad;
-- (void)setUpWindowForMagicMouse;
-@end
