@@ -2996,9 +2996,13 @@ static CGEventRef CGEventCallback(CGEventTapProxy proxy, CGEventType type, CGEve
         //CGEventMaskBit(kCGEventKeyDown);
         eventTap = CGEventTapCreate(kCGSessionEventTap, kCGHeadInsertEventTap, 0, eventMask, CGEventCallback, NULL);
 
-        CGEventTapEnable(eventTap, true);
-        runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0);
-        CFRunLoopAddSource(CFRunLoopGetMain(), runLoopSource, kCFRunLoopCommonModes);
+        if (eventTap != nil) {
+            CGEventTapEnable(eventTap, true);
+            runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0);
+            CFRunLoopAddSource(CFRunLoopGetMain(), runLoopSource, kCFRunLoopCommonModes);
+        } else {
+            NSLog(@"Could not create CGEventTap. Allow Jitouch in System Preferences -> Privacy -> Accessibility.");
+        }
 
         gestureWindow = [[GestureWindow alloc] init];
         sizeHistoryDict = [[NSMutableDictionary alloc] init];
