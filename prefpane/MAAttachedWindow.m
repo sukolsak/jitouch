@@ -330,24 +330,14 @@
 
 - (NSColor *)_backgroundColorPatternImage
 {
-    NSImage *bg = [[NSImage alloc] initWithSize:[self frame].size];
-    NSRect bgRect = NSZeroRect;
-    bgRect.size = [bg size];
-
-    [bg lockFocus];
-    NSBezierPath *bgPath = [self _backgroundPath];
-    [NSGraphicsContext saveGraphicsState];
-    [bgPath addClip];
-
-    // Draw background.
-    [_MABackgroundColor set];
-    [bgPath fill];
-    //[bgPath stroke];
-
-    [NSGraphicsContext restoreGraphicsState];
-    [bg unlockFocus];
-
-    return [NSColor colorWithPatternImage:[bg autorelease]];
+ // TODO: Consider restoring old visual style
+ // using imageWithSize:flipped:drawingHandler e.g.:
+ /*
+    NSImage *bg = [NSImage imageWithSize:[self frame].size
+                                 flipped:NO
+                          drawingHandler:???];
+ */
+    return [NSColor lightGrayColor];  // Return static color for now.
 }
 
 
