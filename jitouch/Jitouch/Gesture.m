@@ -2814,8 +2814,26 @@ static CGEventRef CGEventCallback(CGEventTapProxy proxy, CGEventType type, CGEve
             CGEventSetIntegerValueField(event, kCGMouseEventButtonNumber, 2);
             CGEventSetType(event, kCGEventOtherMouseDragged);
         }
-    } else if (type == kCGEventTapDisabledByUserInput || type == kCGEventTapDisabledByTimeout) {
+    } else if (type == kCGEventTapDisabledByUserInput) {
         CGEventTapEnable(eventTap, true);
+    } else if (type == kCGEventTapDisabledByTimeout) {
+        NSLog(@"Received kCGEventTapDisabledByTimeout; attempting to recreate CGEventTap. Allow Jitouch in System Preferences -> Privacy -> Accessibility.");
+        CFMachPortInvalidate(eventTap);
+        CFRelease(eventTap);
+        CFMachPortRef newEventTap = nil;
+        int i = 0;
+        while (newEventTap == nil) {
+            if (i > 360) {
+                NSLog(@"Could not create CGEventTap");
+                exit(1);
+            }
+            sleep(1);
+            newEventTap = [me createEventTap];
+            i++;
+        }
+        NSLog(@"CGEventTap created");
+        eventTap = newEventTap;
+        return NULL;
     }
 
 
@@ -2890,6 +2908,34 @@ static CGEventRef CGEventCallback(CGEventTapProxy proxy, CGEventType type, CGEve
     }
 
     return event;
+}
+
+- (CFMachPortRef)createEventTap {
+    CGEventMask eventMask;
+    CFRunLoopSourceRef runLoopSource;
+
+    eventMask = CGEventMaskBit(kCGEventScrollWheel) |
+    CGEventMaskBit(kCGEventMouseMoved) |
+    CGEventMaskBit(kCGEventLeftMouseDown) |
+    CGEventMaskBit(kCGEventLeftMouseUp) |
+    CGEventMaskBit(kCGEventRightMouseDown) |
+    CGEventMaskBit(kCGEventRightMouseUp) |
+    CGEventMaskBit(kCGEventOtherMouseDown) |
+    CGEventMaskBit(kCGEventOtherMouseUp) |
+    CGEventMaskBit(kCGEventLeftMouseDragged) |
+    CGEventMaskBit(kCGEventRightMouseDragged) |
+    CGEventMaskBit(kCGEventOtherMouseDragged);
+    //CGEventMaskBit(kCGEventKeyUp) |
+    //CGEventMaskBit(kCGEventKeyDown);
+    CFMachPortRef eventTap = CGEventTapCreate(kCGSessionEventTap, kCGHeadInsertEventTap, 0, eventMask, CGEventCallback, NULL);
+
+    if (eventTap != nil) {
+        CGEventTapEnable(eventTap, true);
+        runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0);
+        CFRunLoopAddSource(CFRunLoopGetMain(), runLoopSource, kCFRunLoopCommonModes);
+    }
+
+    return eventTap;
 }
 
 #pragma mark - Init
@@ -2978,27 +3024,23 @@ static CGEventRef CGEventCallback(CGEventTapProxy proxy, CGEventType type, CGEve
             magicTrackpadRemoved(NULL, magicTrackpadRemovedIterator);
         }
 
-        CGEventMask eventMask;
-        CFRunLoopSourceRef runLoopSource;
-
-        eventMask = CGEventMaskBit(kCGEventScrollWheel) |
-        CGEventMaskBit(kCGEventMouseMoved) |
-        CGEventMaskBit(kCGEventLeftMouseDown) |
-        CGEventMaskBit(kCGEventLeftMouseUp) |
-        CGEventMaskBit(kCGEventRightMouseDown) |
-        CGEventMaskBit(kCGEventRightMouseUp) |
-        CGEventMaskBit(kCGEventOtherMouseDown) |
-        CGEventMaskBit(kCGEventOtherMouseUp) |
-        CGEventMaskBit(kCGEventLeftMouseDragged) |
-        CGEventMaskBit(kCGEventRightMouseDragged) |
-        CGEventMaskBit(kCGEventOtherMouseDragged);
-        //CGEventMaskBit(kCGEventKeyUp) |
-        //CGEventMaskBit(kCGEventKeyDown);
-        eventTap = CGEventTapCreate(kCGSessionEventTap, kCGHeadInsertEventTap, 0, eventMask, CGEventCallback, NULL);
-
-        CGEventTapEnable(eventTap, true);
-        runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0);
-        CFRunLoopAddSource(CFRunLoopGetMain(), runLoopSource, kCFRunLoopCommonModes);
+        eventTap = [me createEventTap];
+        if (eventTap == nil) {
+            NSLog(@"Could not create CGEventTap. Allow Jitouch in System Preferences -> Privacy -> Accessibility.");
+            CFMachPortRef newEventTap = nil;
+            int i = 0;
+            while (newEventTap == nil) {
+                if (i > 360) {
+                    NSLog(@"Could not create CGEventTap");
+                    exit(1);
+                }
+                sleep(1);
+                newEventTap = [me createEventTap];
+                i++;
+            }
+            NSLog(@"CGEventTap created");
+            eventTap = newEventTap;
+        }
 
         gestureWindow = [[GestureWindow alloc] init];
         sizeHistoryDict = [[NSMutableDictionary alloc] init];
