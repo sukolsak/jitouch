@@ -2814,8 +2814,11 @@ static CGEventRef CGEventCallback(CGEventTapProxy proxy, CGEventType type, CGEve
             CGEventSetIntegerValueField(event, kCGMouseEventButtonNumber, 2);
             CGEventSetType(event, kCGEventOtherMouseDragged);
         }
-    } else if (type == kCGEventTapDisabledByUserInput || type == kCGEventTapDisabledByTimeout) {
+    } else if (type == kCGEventTapDisabledByUserInput) {
         CGEventTapEnable(eventTap, true);
+    } else if (type == kCGEventTapDisabledByTimeout) {
+        NSLog(@"kCGEventTapDisabledByTimeout; exiting.");
+        exit(1);
     }
 
 
